@@ -15,6 +15,7 @@ const functionsCall=(display , hide)=>{
     displayPages(display);
     hidePages(hide);
 }
+
 const srcImage=(image)=>imageMain.src=image.src
 subImage.forEach((image)=>image.addEventListener("click" ,()=> srcImage(image)))
 loginNavBtn.forEach((btn)=>btn.addEventListener("click",()=>functionsCall(loginPage , mainPage)));

@@ -1,3 +1,6 @@
+body{
+    background-color: #fcfcfc;
+}
 input{
     outline: none;
 }
@@ -24,7 +27,7 @@ ul{
 }
 .main-nav{
     background-color: hsl(0, 0%, 99%);
-    box-shadow: 0 0 10px 1px #222 !important;
+    box-shadow: 0 0 8px 0.2px #222 !important;
     position: fixed;
     top:0;
     z-index: 99999;
@@ -33,10 +36,10 @@ ul{
 .right-nav{
     position:fixed;
     background:#e4e4e4;
-    box-shadow: 0 0 15px 1px var( --main_color);
+    box-shadow: 0 0 5px 1px #222 !important;
     top:0;
     right:0;
-    width:35%;
+    width:40%;
     height: 100%;
     z-index: 99999;
 }
@@ -71,9 +74,6 @@ menu{
     background-image: url(../images/cover-home-page.png);
     background-size:100% 100%;
 }
-.content-main{
-    flex-wrap: wrap;
-}
 .main-text{
     font-size:4rem;
     line-height:90px;
@@ -88,28 +88,40 @@ menu{
     color: #e4e4e4;
     border: 0;
     padding:0.5rem;
+    transition: all 1s;
+}
+.shop-now-home-btn:hover ,.Add-cart-btn:hover{
+    color: #f5f5f5;
+    background:linear-gradient(to right,#851561 ,#3d0a80);
+    border: 0;
 }
 .product-text ,.text-about ,.text-customers-review ,.text-our-services{
     background:var(--main_background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight:700;
-    font-size: 5rem !important;    
+    font-size:5rem !important;    
 }
 .product-cover{
     max-width:300px;
 }
 .content-product{ 
     position: relative;
-    box-shadow:0 0 12px 2px var(--second_color);
+    box-shadow:1px 0 9px 0 #d8c7ee;
     width: 250px;
     background-color: #f7f5f5;
     border-radius:0.5rem;
     transition:all 2s;
     z-index: 9999;
+    cursor: pointer;
+    min-height:350px;
 }
 .product-cover p{
     font-size:13px;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
 }
 .Add-cart-btn{
     border-radius:0.3rem;
@@ -122,13 +134,16 @@ menu{
     font-size: 15px;
 }
 img{
-    transition: all 1s;
+    transition: all 1s ;
+}
+img , i , button{
+    cursor: pointer;
 }
 .product-cover:hover img{
     transform:scale(1.2 ,1.2);
 }
 .text-about{
-   font-size:3.5rem !important;
+   font-size:2.5rem !important;
 }
 .images-display-product img{
     background:var(--main_background);
@@ -138,24 +153,44 @@ img{
     height:20%;
 }
 .main-img{
-    box-shadow: 0 0 10px 3px var(--second_color);
+    box-shadow: 0 0 9px 2px var(--second_color);
+    box-shadow: 1px 0 5px 1.9px #e7cdcd;
     margin-left: -1.2rem;
     border-radius: 0.4rem;
 }
 .text-about-page{
-    box-shadow: 0 0 10px 3px var(--main_color);
-    border-radius: 0.4rem;
-    height:23rem !important;
+    box-shadow:3px 6px 15px 0 #d6cbdf96;
+    background-color: #fafafa;
+    border-radius: 0.6rem;
+    transform:skew(-20deg ,2deg);
 }
 .shop-now-about-btn{
     background-color: transparent;
-    box-shadow: 0 0 10px 3px var(--main_color);
+    box-shadow: 0 0 3px 1px var(--main_color);
     border: 0;
-    border-radius:0.4rem;
+    border-radius:0.9rem;
 }
 .shop-now-about-btn:hover{
  background-color: var(--main_color);
  color: #e0d9d9;
+}
+.swiper {
+    width:50%;
+    height: 320px;
+}
+.swiper-slide {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+.swiper-slide:nth-child(1n) {
+    background-color:#e0d9d9;
+    height:200px;
 }
 .customer{
     background-color: #e0d9d9;
@@ -171,8 +206,7 @@ img{
    font-size:0.8rem !important;
 }
 .text-customers-review ,.text-our-services{
-    font-size:3rem !important;
-
+    font-size:2.5rem !important;
 } 
 .services-paragraph{
     font-size:12px;
@@ -183,7 +217,6 @@ img{
 }
 .footer{
     background-color: #e0d9d9;
-
 }
 .tag a{
     display: block;
@@ -204,7 +237,7 @@ img{
     border: 0;
     color: #e4e4e4;
 }
-#login-page{
+#logIn-page{
     display: none;
 }
 .login-cover{
@@ -238,7 +271,7 @@ form img{
 }
 @media screen and (max-width:600px){
 :root{
-    font-size:8px;
+    font-size:11px;
 }
 p{
     font-size:1.4rem;
@@ -254,6 +287,7 @@ menu{
 }
 .right-nav{
     display: none;
+    width:45%;
 }
 .comment-customer ,.name-customer{
     font-size:1.8rem !important;    
@@ -303,8 +337,7 @@ menu{
 @media screen and (min-width:851px){
     .right-nav{
        display: none !important;
-    }
-  
+    }  
 }
     
 
