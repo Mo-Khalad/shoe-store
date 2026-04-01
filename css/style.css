@@ -174,24 +174,6 @@ img , i , button{
  background-color: var(--main_color);
  color: #e0d9d9;
 }
-.swiper {
-    width:50%;
-    height: 320px;
-}
-.swiper-slide {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 22px;
-    font-weight: bold;
-    border-radius: 1rem;
-}
-.swiper-slide:nth-child(1n) {
-    background-color:#e0d9d9;
-    height:200px;
-}
 .customer{
     background-color: #e0d9d9;
 }
@@ -269,16 +251,8 @@ form img{
     border-radius: 50%;
     background-color: #f3f3f3;
 }
-@media screen and (max-width:600px){
-:root{
-    font-size:11px;
-}
-p{
-    font-size:1.4rem;
-}
-.text-about{
-    font-size: 0.1rem;
-}
+
+@media screen and ( max-width:600px ){
 .main-nav{
     display: none;
 }
@@ -287,7 +261,7 @@ menu{
 }
 .right-nav{
     display: none;
-    width:45%;
+    width:50%;
 }
 .comment-customer ,.name-customer{
     font-size:1.8rem !important;    
@@ -311,11 +285,12 @@ form img{
     border-radius: 2rem;
     font-size: 1.5rem;
 }
+.show{
+    height: 400px !important;
+    padding: 20px !important;
+}
 }
 @media screen and (min-width:600px) and (max-width:851px) {
-:root{
-    font-size:12px;
-}
 .main-nav{
     display: none;
 }
@@ -340,4 +315,51 @@ menu{
     }  
 }
     
+
+
+
+.Accordion{
+    margin-top: 100px !important;
+    width: 60%;
+    margin: auto;
+}
+.Accordion_Header{
+    position: relative;
+}
+.accordion_Item{
+    background-color: #f8f7f7;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    transition: height 2s ease;
+    border-bottom: #b4b4b4;
+    box-shadow: 1px 1px 0.5px 0.5px #b4b4b4;
+}
+.customer-name{
+    position:absolute;
+    top:20px;
+    left: 10px;
+}
+.angle_down_btns ,.angle_up_btns{
+    width: 100%;
+    height: 60px;
+    padding: 20px 40px;
+    border: 0;
+    border-bottom: 1px solid #b4b4b4;
+    display: flex;
+    font-weight: 500;
+}
+.accordion_body{
+    height: 0;
+}
+.show{
+    height: 240px !important;
+    padding: 20px !important;
+}
+.angle-down ,.angle-up{
+    transition: all 1s;
+}
+.angle_down_btns:hover .angle-down ,.angle_up_btns .angle-up{
+  color:var(--main_color) ;
+}
 
