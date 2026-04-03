@@ -1,5 +1,5 @@
 body{
-    background-color: #fcfcfc;
+    background-color: #f7f6f6;
 }
 input{
     outline: none;
@@ -20,7 +20,7 @@ a{
     transition: color 0.3s;
 }
 a:hover ,i:hover{
-color:var(--main_color);
+    color:var(--main_color);
 }
 ul{
     list-style-type: none;
@@ -36,7 +36,6 @@ ul{
 .right-nav{
     position:fixed;
     background:#e4e4e4;
-    box-shadow: 0 0 5px 1px #222 !important;
     top:0;
     right:0;
     width:40%;
@@ -48,13 +47,12 @@ ul{
     border:1px solid var(--second_color);
     color:var(--second_color);
     border-radius:1.5rem;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 .login-nav-btn:hover{
-    border:1px solid var(--main_color);
     background-color: var(--main_color);
     color: #f7f5f5;
-    border: 0;
+    border:1px solid var(--main_color);
 }
 .text-shoe{
     color: var( --main_color);
@@ -63,34 +61,49 @@ ul{
    color: var(--second_color);
    border-bottom:3px solid var(--second_color);
 }
-menu{
+.menu-nav{
     position: fixed;
-    top:0.5rem; 
-    right:1rem;
+    top: 0;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    z-index: 99999;
+    background-color: #f8f7f8;
     color: var( --main_color);
-    display: none;
+    box-shadow: #22222231 1px 1px 4px 0.1px;
+}
+menu{
+    box-shadow: #22222231 1px 1px 4px 0.1px;
+    padding: 0.6rem;
+    border-radius: 0.3rem;   
 }
 .Home{
     background-image: url(../images/cover-home-page.png);
-    background-size:100% 100%;
+    background-size:cover;
+    margin-top: 75px;
 }
 .main-text{
-    font-size:4rem;
+    font-size:2.8rem;
     line-height:90px;
     font-family: pyxidium quick;
     background:var(--main_background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.shop-now-home-btn,.Add-cart-btn{
+p{
+    color: #b3b0b8;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.shop-now-home-btn ,.add-cart-btn{
     background:var(--main_background);
-    border-radius:2rem;
+    transition: all 1s;
+    border-radius:0.3rem;
     color: #e4e4e4;
     border: 0;
     padding:0.5rem;
-    transition: all 1s;
 }
-.shop-now-home-btn:hover ,.Add-cart-btn:hover{
+.shop-now-home-btn:hover ,.add-cart-btn:hover{
     color: #f5f5f5;
     background:linear-gradient(to right,#851561 ,#3d0a80);
     border: 0;
@@ -100,7 +113,7 @@ menu{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight:700;
-    font-size:5rem !important;    
+    font-size:3rem !important;    
 }
 .product-cover{
     max-width:300px;
@@ -111,10 +124,16 @@ menu{
     width: 250px;
     background-color: #f7f5f5;
     border-radius:0.5rem;
-    transition:all 2s;
+    transition:all 1s;
     z-index: 9999;
     cursor: pointer;
-    min-height:350px;
+    min-height:300px;
+}
+.images-display-product img{
+    background:var(--main_background);
+    height:20%;
+    border-bottom:0.5px solid #dfdada;
+    padding: 8px;
 }
 .product-cover p{
     font-size:13px;
@@ -122,9 +141,6 @@ menu{
     -webkit-line-clamp:2;
     overflow: hidden;
     -webkit-box-orient: vertical;
-}
-.Add-cart-btn{
-    border-radius:0.3rem;
 }
 .icon-like{
     position: absolute;
@@ -134,45 +150,90 @@ menu{
     font-size: 15px;
 }
 img{
-    transition: all 1s ;
+    transition: all 1s;
 }
 img , i , button{
     cursor: pointer;
 }
-.product-cover:hover img{
+i{
+    font-size: 20px;
+}
+.content-product:hover img{
     transform:scale(1.2 ,1.2);
 }
 .text-about{
    font-size:2.5rem !important;
 }
-.images-display-product img{
-    background:var(--main_background);
-    margin-top:0.5rem ;
-    padding:0.3rem;
-    border-radius: 0.3rem;
-    height:20%;
-}
-.main-img{
-    box-shadow: 0 0 9px 2px var(--second_color);
+.slider-img{
     box-shadow: 1px 0 5px 1.9px #e7cdcd;
-    margin-left: -1.2rem;
-    border-radius: 0.4rem;
+    height: 100%;
 }
 .text-about-page{
     box-shadow:3px 6px 15px 0 #d6cbdf96;
     background-color: #fafafa;
     border-radius: 0.6rem;
-    transform:skew(-20deg ,2deg);
+    transform:skew(-8deg ,3deg);
+    margin-top: 60px;
+}
+.text-about-page p{
+    font-size: 1.2rem;
+    margin-left: 30px;
 }
 .shop-now-about-btn{
     background-color: transparent;
     box-shadow: 0 0 3px 1px var(--main_color);
     border: 0;
     border-radius:0.9rem;
+    transition: all 1s;
 }
 .shop-now-about-btn:hover{
- background-color: var(--main_color);
- color: #e0d9d9;
+    background-color: var(--main_color);
+    color: #e0d9d9;
+}
+.Our-text{
+    font-size: 40px !important;
+}
+.Accordion_Header{
+    position: relative;
+}
+.accordion_Item{
+    background-color: #f8f7f7;
+    padding: 0;
+    height: 60px;
+    overflow: hidden;
+    transition: height 2s ease;
+    border-bottom: #b4b4b4;
+    box-shadow: 1px 1px 0.5px 0.5px #b4b4b4;
+}
+.customer-name{
+    position:absolute;
+    top:20px;
+    left: 10px;
+}
+.angle_down_btns ,.angle_up_btns{
+    width: 100%;
+    height: 60px;
+    padding: 20px 40px;
+    border: 0;
+    border-bottom: 1px solid #b4b4b4;
+    display: flex;
+    font-weight: 500;
+}
+.accordion_body{
+    height: 0;
+}
+.show{
+    height: 240px !important;
+    padding: 20px !important;
+}
+.angle-down ,.angle-up{
+    transition: all 1s;
+}
+.angle_down_btns:hover .angle-down ,.angle_up_btns .angle-up{
+  color:var(--main_color) ;
+}
+.accordion_body p{
+    font-size: 1rem;
 }
 .customer{
     background-color: #e0d9d9;
@@ -194,8 +255,11 @@ img , i , button{
     font-size:12px;
 }
 .truck-fast ,.rotate-left ,.headset{
-    font-size:80px;
+    font-size:70px !important;
     color: orange;
+}
+.fa-star ,.fa-star-half-stroke{
+    font-size: 14px !important;
 }
 .footer{
     background-color: #e0d9d9;
@@ -212,10 +276,17 @@ img , i , button{
     color: #f7f5f5;
     border-radius:1rem;
     border: 0; 
+    width: 100%;
+    height:33%;
+    border-radius: 0.2rem;
+    font-size: 1rem;
 }
 .Subscribe-btn{
     background:var(--main_background);
-    border-radius:1rem;
+    width: 70%;
+    height:33%;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
     border: 0;
     color: #e4e4e4;
 }
@@ -256,12 +327,32 @@ form img{
 .main-nav{
     display: none;
 }
-menu{
-    display: block
+.menu-nav{
+    display: flex;
+    z-index: 99999999;
+}
+.login-nav-btn{
+    margin-top: 20px;
+    width: 100%;
 }
 .right-nav{
     display: none;
     width:50%;
+}
+.Home{
+    margin-top: 0px;
+    background-image: none;
+}
+.image-home{
+    display: none;
+}
+.images-display-product img{
+    background:linear-gradient(to bottom,#c72092 ,#6c14de);
+    border-right:0.5px solid #dfdada;
+}
+.text-about-page p{
+    font-size: 1rem;
+    margin-left: 0 !important;
 }
 .comment-customer ,.name-customer{
     font-size:1.8rem !important;    
@@ -271,7 +362,7 @@ menu{
 }
 .tag a{
     display: block;
-    font-size:15px;
+    font-size:17px;
 }
 h6{
     font-size:20px;
@@ -280,13 +371,18 @@ form img{
     width:20px !important;
 }
 .Subscribe-input ,.Subscribe-btn{
-    width: 50%;
+    width: 100%;
     height:33%;
-    border-radius: 2rem;
-    font-size: 1.5rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+}
+.Subscribe-btn{
+    border-radius: 0.4rem;
+    width: 70%;
+    margin: auto;
 }
 .show{
-    height: 400px !important;
+    height: 300px !important;
     padding: 20px !important;
 }
 }
@@ -297,69 +393,15 @@ form img{
 .right-nav{
     display: none;
 }
-menu{
-     display:block
+.menu-nav{
+     display:flex
 }
-.main-text{
-    font-size:2rem;
-}
-}
-@media screen and (min-width:851px) and (max-width:1199px) {
-    .main-text{
-        font-size:3rem;
-    }
 }
 @media screen and (min-width:851px){
-    .right-nav{
-       display: none !important;
-    }  
+.right-nav{
+    display: none !important;
 }
-    
-
-
-
-.Accordion{
-    margin-top: 100px !important;
-    width: 60%;
-    margin: auto;
+.menu-nav{
+     display:none !important
 }
-.Accordion_Header{
-    position: relative;
 }
-.accordion_Item{
-    background-color: #f8f7f7;
-    width: 100%;
-    height: 60px;
-    overflow: hidden;
-    transition: height 2s ease;
-    border-bottom: #b4b4b4;
-    box-shadow: 1px 1px 0.5px 0.5px #b4b4b4;
-}
-.customer-name{
-    position:absolute;
-    top:20px;
-    left: 10px;
-}
-.angle_down_btns ,.angle_up_btns{
-    width: 100%;
-    height: 60px;
-    padding: 20px 40px;
-    border: 0;
-    border-bottom: 1px solid #b4b4b4;
-    display: flex;
-    font-weight: 500;
-}
-.accordion_body{
-    height: 0;
-}
-.show{
-    height: 240px !important;
-    padding: 20px !important;
-}
-.angle-down ,.angle-up{
-    transition: all 1s;
-}
-.angle_down_btns:hover .angle-down ,.angle_up_btns .angle-up{
-  color:var(--main_color) ;
-}
-

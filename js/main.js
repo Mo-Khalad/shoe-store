@@ -1,4 +1,5 @@
-const menu =document.getElementById("menu");
+const menu=document.getElementById("menu");
+const menu_nav=document.querySelector(".menu-nav");
 const rightNav=document.querySelector(".right-nav");
 const iconClose=document.querySelector(".icon-close");
 const navLinks=document.querySelectorAll(".nav-links");
@@ -11,16 +12,16 @@ const accordion_body =document.querySelectorAll(".accordion_body")
 const accordion_btn = document.querySelectorAll('.accordion_btn');
 const accordion_Item = document.querySelectorAll(".accordion_Item");
 const angle_down_btns = document.querySelectorAll(".angle_down_btns");
-//const angle_down = document.getElementById('angle_down');
 let angle_up_btns  =''
-console.log(accordion_body , 'body' ,
-    accordion_btn ,'btn' ,
-    accordion_Item , 'item' ,
-    angle_down_btns ,
-);
 
-const displayNavRight=()=>rightNav.style.display='block';    
-const closeNavRight=()=>rightNav.style.display='none';    
+const displayNavRight=()=>{
+   rightNav.style.display='block';
+   menu_nav.style.display='none'
+};    
+const closeNavRight=()=>{
+   rightNav.style.display='none';
+   menu_nav.style.display='flex';
+};    
 const displayPages=(page)=>page.style.display='block';
 const hidePages =(page)=>page.style.display='none';
 
