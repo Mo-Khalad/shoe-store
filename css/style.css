@@ -97,16 +97,18 @@ p{
 }
 .shop-now-home-btn ,.add-cart-btn{
     background:var(--main_background);
-    transition: all 1s;
     border-radius:0.3rem;
     color: #e4e4e4;
     border: 0;
     padding:0.5rem;
+    background-size: 200% 100%;
+    background-position: left;
+    transition: background-position 1s;
 }
 .shop-now-home-btn:hover ,.add-cart-btn:hover{
     color: #f5f5f5;
-    background:linear-gradient(to right,#851561 ,#3d0a80);
     border: 0;
+    background-position: right; 
 }
 .product-text ,.text-about ,.text-customers-review ,.text-our-services{
     background:var(--main_background);
@@ -319,10 +321,16 @@ form button{
     border: 0;
 }
 form img{
+    margin-top: 25px;
     border-radius: 50%;
     background-color: #f3f3f3;
 }
-
+.logIn-page-content p {
+    font-size: 0.8rem;
+    padding-top: 0.3rem;
+    padding-left: 0.6rem !important;
+    color: #3a393998;
+}
 @media screen and ( max-width:600px ){
 .main-nav{
     display: none;
@@ -367,9 +375,6 @@ form img{
 h6{
     font-size:20px;
 }
-form img{
-    width:20px !important;
-}
 .Subscribe-input ,.Subscribe-btn{
     width: 100%;
     height:33%;
@@ -380,10 +385,6 @@ form img{
     border-radius: 0.4rem;
     width: 70%;
     margin: auto;
-}
-.show{
-    height: 300px !important;
-    padding: 20px !important;
 }
 }
 @media screen and (min-width:600px) and (max-width:851px) {
