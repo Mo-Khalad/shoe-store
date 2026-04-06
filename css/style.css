@@ -19,8 +19,11 @@ a{
     color: #222;
     transition: color 0.3s;
 }
+i ,a{
+    transition: all 1s;
+}
 a:hover ,i:hover{
-    color:var(--main_color);
+    color: var(--second_color);
 }
 ul{
     list-style-type: none;
@@ -330,6 +333,9 @@ form img{
     padding-top: 0.3rem;
     padding-left: 0.6rem !important;
     color: #3a393998;
+}
+.active{
+    color: var(--second_color);   
 }
 @media screen and ( max-width:600px ){
 .main-nav{
