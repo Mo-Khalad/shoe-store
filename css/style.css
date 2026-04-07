@@ -21,7 +21,7 @@ a{
 }
 i ,a{
     transition: all 1s;
-}
+} 
 a:hover ,i:hover{
     color: var(--second_color);
 }
